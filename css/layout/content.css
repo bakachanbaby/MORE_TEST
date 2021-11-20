@@ -29,9 +29,17 @@
     display: flex;
 }
 
+.m-c-s-mcombobox {
+    margin-right: 24px;
+}
+
+.m-c-s-all {
+    width: 200px;
+}
+
 .m-row.m-l-search input {
     min-width: 250px;
-    height: 32px;
+    height: 40px;
     margin-right: 16px;
 }
 

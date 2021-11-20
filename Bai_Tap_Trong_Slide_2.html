@@ -85,33 +85,29 @@
                     <input type="text" class="m-input m-input-search" name="" id="" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại">
                 </div>
 
-                <div class="m-row m-l-department">
-                    <div class="m-content-chose-form">
-                        <div class="m-chose-form-text">
-                            Tất cả phòng ban
-                        </div>
-                        <div class="m-chose-form-icon"><i class="fas fa-chevron-down"></i></div>
-                    </div>
-                    <div class="m-chose-list">
-                        <div class="m-chose-list-op">Phòng Nhân sự</div>
-                        <div class="m-chose-list-op">Phòng Đào tạo</div>
-                        <div class="m-chose-list-op">Phòng Công nghệ</div>
-                        <div class="m-chose-list-op">Phòng Marketting</div>
+                <div class="mcombobox m-c-s-mcombobox">
+                    <input type="text" class="m-combobox m-combobox-input m-c-s-all" placeholder="Tất cả phòng ban">
+                    <button tabindex="-1" class="m-combobox-button">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="m-combobox-data">
+                        <div class="m-combobox-item" value="1">Phòng Nhân sự</div>
+                        <div class="m-combobox-item" value="2">Phòng Đào tạo</div>
+                        <div class="m-combobox-item" value="3">Phòng Công nghệ</div>
+                        <div class="m-combobox-item" value="4">Phòng Marketting</div>
                     </div>
                 </div>
 
-                <div class="m-row m-l-location">
-                    <div class="m-content-chose-form">
-                        <div class="m-chose-form-text">
-                            Tất cả vị trí
-                        </div>
-                        <div class="m-chose-form-icon"><i class="fas fa-chevron-down"></i></div>
-                    </div>
-                    <div class="m-chose-list">
-                        <div class="m-chose-list-op">Nhân viên thường</div>
-                        <div class="m-chose-list-op">Nhân viên Marketting</div>
-                        <div class="m-chose-list-op">Giám Đốc</div>
-                        <div class="m-chose-list-op">Thu Ngân</div>
+                <div class="mcombobox m-c-s-mcombobox">
+                    <input type="text" class="m-combobox m-combobox-input m-c-s-all" placeholder="Tất cả vị trí">
+                    <button tabindex="-1" class="m-combobox-button">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="m-combobox-data">
+                        <div class="m-combobox-item" value="1">Nhân viên thường</div>
+                        <div class="m-combobox-item" value="2">Nhân viên Marketting</div>
+                        <div class="m-combobox-item" value="3">Giám Đốc</div>
+                        <div class="m-combobox-item" value="4">Thu Ngân</div>
                     </div>
                 </div>
 
@@ -397,6 +393,7 @@
 
 
 </body>
+<!-- js -->
 <script src="./js/btn.js"></script>
 <script src="./js/app.js"></script>
 <script src="./js/combobox.js"></script>
