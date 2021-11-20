@@ -1,0 +1,35 @@
+table.m-table {
+    width: 100%;
+    /* border-spacing: unset; */
+    border: none;
+    border-collapse: collapse;
+}
+
+table.m-table tr {
+    height: 48px;
+    cursor: pointer;
+}
+
+table.m-table tbody tr:nth-child(2n-1) {
+    background-color: #dadada;
+}
+
+table.m-table tbody tr:hover {
+    background-color: #929292;
+}
+
+table.m-table th,
+td {
+    padding: 0 8px;
+    border: none;
+}
+
+tr {
+    /* border: none; */
+    border-bottom: 1px solid #dddddd;
+}
+
+table.m-table tr td:first-child,
+table.m-table th:first-child {
+    padding-left: 16px;
+}

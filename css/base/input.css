@@ -1,0 +1,77 @@
+input.m-input {
+    position: relative;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    height: 40px;
+    padding: 0 16px;
+    color: black;
+    outline: none;
+}
+
+.m-input::placeholder {
+    font-size: 11px;
+    color: #bbbbbb;
+}
+
+
+/* tạo bg cho khi nhập */
+
+.m-input:focus {
+    border-color: #019160;
+}
+
+.m-input.m-input-search {
+    background: url('/content/icon/search.png');
+    background-repeat: no-repeat;
+    background-position: 16px center;
+    background-size: 16px 16px;
+    padding-left: 40px;
+}
+
+.m-input.m-input-search:focus {
+    border-color: #019160;
+}
+
+.m-input.m-input-search::placeholder {
+    font-size: 12px;
+    color: #bbbbbb;
+}
+
+.m-input.m-input-error {
+    border-color: #ff0000;
+}
+
+.m-input.m-input-error+.m-error-info {
+    top: 22%;
+    position: absolute;
+    border: 1px solid #FF4646;
+    background-color: #FF4646;
+    border-radius: 4px;
+    color: white;
+    padding: 8px;
+}
+
+.m-arrow-bottom {
+    position: absolute;
+    top: calc(100% - 10px);
+    left: calc(50% - 10px);
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    background-color: #FF4646;
+}
+
+.m-input-box {
+    width: 250px;
+}
+
+.m-input-box input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.m-input-box .m-error-info {
+    text-align: center;
+    /* width: 100%; */
+    box-sizing: border-box;
+}

@@ -1,0 +1,84 @@
+.m-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #019160;
+    border-radius: 4px;
+    height: 40px;
+    color: #fff;
+    padding: 0 24px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+    white-space: nowrap;
+    /*chữ luôn ở 1 dòng*/
+    box-sizing: border-box;
+}
+
+.m-btn:hover {
+    background-color: #2FBE8E;
+}
+
+.m-btn:active {
+    background-color: #01B075;
+}
+
+.m-btn.m-btn-2 {
+    position: absolute;
+    border-radius: 0 4px 4px 0;
+    margin-left: 208px;
+    min-width: 50px;
+    border-left: 1px solid white;
+}
+
+.m-btn.m-btn-1 {
+    border-radius: 4px 0 0 4px;
+}
+
+
+/* Button Icon */
+
+.m-btn .m-btn-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    margin-right: 8px;
+    background-image: url(../../content/icon/add.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.m-btn .m-btn-icon-save {
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    margin-right: 8px;
+    background-image: url(../../content/icon/save-regular.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.m-btn-2 .m-btn-icon-down {
+    width: 16px;
+    height: 16px;
+    /* border-left: 1px solid white; */
+    /* padding-left: 12px; */
+    /* margin-left: 28px; */
+    background-image: url(../../content/icon/chevron-down-solid.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.m-btn .m-btn-text {
+    margin-right: -8px;
+}
+
+.m-btn-nobg {
+    background-color: unset !important;
+    color: black;
+}
+
+.m-btn-nobg:hover {
+    background-color: #E4E4E4 !important;
+}

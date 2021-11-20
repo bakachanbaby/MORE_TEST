@@ -1,0 +1,154 @@
+.m-dialog {
+    position: relative;
+    border-radius: 4px;
+    max-width: 800px;
+    height: 100vh;
+    font-size: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.m-dialog-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* HEADER */
+
+.m-dialog .m-dialog-header {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 4px 4px 0 0;
+}
+
+.m-dialog .m-dialog-header .m-dialog-title {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.m-dialog .m-dialog-header .m-dialog-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    width: 24px;
+    height: 24px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.m-dialog .m-dialog-header .m-dialog-close:hover {
+    opacity: 1;
+}
+
+
+/* CONTENT */
+
+.m-dialog .m-dialog-content {
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-start;
+    background-color: #FFFFFF;
+}
+
+.m-dialog-content-left {
+    max-width: 150px;
+    padding: 16px;
+}
+
+.m-dialog-content-l-avatar {
+    height: 96px;
+    width: 96px;
+    text-align: center;
+    line-height: 96px;
+    border-radius: 50%;
+    margin: 10px;
+    border: 1px solid #BDBEC0;
+    font-size: 64px;
+    color: #BDBEC0;
+    cursor: pointer;
+}
+
+.m-dialog-content-l-text {
+    text-align: center;
+}
+
+.m-dialog-content-right {
+    padding: 16px;
+}
+
+.m-dialog-content-r-general-information {}
+
+.m-d-c-r-g-i-header {}
+
+.m-d-c-r-g-i-header-text {
+    text-transform: uppercase;
+}
+
+.m-d-c-r-g-i-header-border {
+    max-width: 64px;
+    border-bottom: 5px solid #019160;
+    margin: 8px 0;
+}
+
+.m-d-c-r-g-i-content {
+    display: flex;
+}
+
+.m-d-c-r-g-i-content-left {
+    margin-right: 16px;
+}
+
+strong {
+    color: red;
+}
+
+.m-d-c-r-g-i-c-box-input {
+    margin-bottom: 10px;
+}
+
+.m-d-c-r-g-i-c-box-input input {
+    width: 250px;
+    height: 40px;
+}
+
+.m-d-c-r-g-i-c-box-input .m-combobox {
+    height: 30px;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    min-width: 250px;
+    outline: unset;
+}
+
+
+/* FOOTER */
+
+.m-dialog .m-dialog-footer {
+    display: flex;
+    justify-content: end;
+    background-color: #F4F4F4;
+    padding: 10px;
+    border-radius: 0 0 4px 4px;
+}
+
+.m-dialog .m-dialog-footer .m-btn-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    margin-left: 15px;
+}
+
+.m-btn-dialog-icon-save {
+    margin-right: 10px;
+}

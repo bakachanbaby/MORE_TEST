@@ -1,0 +1,38 @@
+@import url(./common/common.css);
+@import url(./common/combobox.css);
+@import url(./common/table.css);
+@import url(./common/paging-navigation.css);
+@import url(./base/button.css);
+@import url(./base/input.css);
+@import url(./base/toast.css);
+
+/* @import url(./base/dialog.css); */
+
+@import url(./layout/navbar.css);
+@import url(./layout/content.css);
+@import url(./layout/header.css);
+@import url(popuppage.css);
+body {
+    font-family: BAKA font;
+    font-size: 11px;
+    min-height: 1000px;
+    margin: 0;
+}
+
+
+/* Font */
+
+@font-face {
+    font-family: BAKA font;
+    src: url('/content/font/GoogleSans-Regular.otf');
+}
+
+@font-face {
+    font-family: BAKA font Bold;
+    src: url('../content/font/GoogleSans-Bold.otf');
+}
+
+@font-face {
+    font-family: BAKA font Italic;
+    src: url('../content/font/GoogleSans-Italic.otf');
+}

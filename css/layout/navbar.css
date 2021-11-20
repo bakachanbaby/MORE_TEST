@@ -1,0 +1,113 @@
+.navbar {
+    float: left;
+    width: 226px;
+    /* background-color: aquamarine; */
+    height: 100vh;
+    border-right: 1px solid #656666;
+    border-radius: 0;
+}
+
+.navbar .m-logo-box {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+}
+
+.navbar .m-logo-box .m-toggle {
+    width: 24px;
+    height: 24px;
+    /* align-items: center; */
+    background-image: url(../../content/img/toggle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar .m-logo-box .m-logo-page {
+    width: 200px;
+    flex: 1;
+    height: 35px;
+    /* background-color: gold; */
+    margin-left: 10px;
+    background-image: url(../../content/img/cukcuk-logo.png);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.navbar .m-navbar-box {
+    width: 100%;
+}
+
+.m-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 44px;
+    color: black;
+    cursor: pointer;
+}
+
+.m-menu-item-active {
+    background-color: #009060;
+    color: white;
+}
+
+.m-menu-item-active {
+    background-color: #009060;
+    color: white;
+}
+
+.m-menu-item-active:hover {
+    background-color: #E4E4E4;
+    color: black;
+}
+
+.m-menu-item:hover {
+    background-color: #E4E4E4;
+    /* color: white; */
+}
+
+.m-menu-item:active {
+    background-color: #e4e4e488;
+}
+
+.m-menu-item-icon {
+    width: 20px;
+    height: 20px;
+    /* background-color: darkorange; */
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.m-menu-item-icon i {
+    width: 20px;
+    height: 20px;
+    color: #656666;
+    line-height: 20px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.m-menu-item-icon.icon-cloud-file {
+    background-image: url(../../content/icon/document-online.png);
+}
+
+.m-menu-item-icon.icon-track-spending {
+    background-image: url(../../content/icon/report.png);
+}
+
+.m-menu-item-icon.icon-track-pay {
+    background-image: url(../../content/icon/dashboard.png);
+}
+
+.m-menu-item-icon.icon-management {
+    background-image: url(../../content/icon/dic-employee.png);
+}
+
+.m-menu-item-icon.icon-setting {
+    background-image: url(../../content/icon/setting.png);
+}

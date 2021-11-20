@@ -1,0 +1,101 @@
+.m-paging {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    width: 100%;
+    /* background-color: #e5e5e5; */
+    /* border: 1px solid #ddd; */
+}
+
+.m-paging .m-paging-hover:hover {
+    background-color: #4cc7a4;
+}
+
+.m-paging .m-paging-left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 15px;
+    /* flex-wrap: wrap; */
+}
+
+.m-paging .m-paging-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.m-paging .m-paging-right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 15px;
+}
+
+.m-paging .m-paging-right select {
+    font-size: 15px;
+}
+
+.m-paging .m-paging-first {
+    width: 32px;
+    height: 32px;
+    /* background-color: brown; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../content/icon/btn-firstpage.svg);
+}
+
+.m-paging .m-paging-prev {
+    width: 32px;
+    height: 32px;
+    background-image: url(../../content/icon/btn-prev-page.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: rgb(165, 97, 42); */
+}
+
+.m-paging .m-paging-number {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    /* height: 32px; */
+    /* background-color: rgb(153, 165, 42); */
+}
+
+.m-paging .m-paging-next {
+    width: 32px;
+    height: 32px;
+    background-image: url(../../content/icon/btn-next-page.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: rgb(42, 165, 79); */
+}
+
+.m-paging .m-paging-last {
+    width: 32px;
+    height: 32px;
+    background-image: url(../../content/icon/btn-lastpage.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: rgb(42, 165, 144); */
+}
+
+.m-paging .page-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    color: black;
+}
+
+.m-paging .page-number-1 {
+    background-color: #019160;
+    color: white;
+}

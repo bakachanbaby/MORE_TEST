@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    float: left;
+    font-size: 15px;
+    height: 60px;
+    width: calc(100% - 226px);
+    border-bottom: 1px solid #656666;
+    /* background-color: cadetblue; */
+}
+
+.m-header-left,
+.m-header-right {
+    display: flex;
+    cursor: pointer;
+    padding: 20px;
+    align-items: center;
+}
+
+.m-header-l-text {
+    margin-right: 10px;
+}
+
+.m-header-r-avatar {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    background-image: url(../../content/icon/avatar-default.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.m-header-r-more {
+    margin-left: 16px;
+}
+
+.m-header-r-more i:hover {
+    color: #656666;
+}
