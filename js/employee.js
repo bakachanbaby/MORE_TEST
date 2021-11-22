@@ -254,6 +254,7 @@ class EmlpoyeePage {
                     type: "POST",
                     url: "http://cukcuk.manhnv.net/api/v1/Employees",
                     data: JSON.stringify(e),
+                    async: false,
                     dataType: "json",
                     contentType: "application/json",
                     success: function(response) {
