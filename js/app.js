@@ -58,7 +58,7 @@ function loadData() {
 function addEmployee() {
     // show
     $("#m-btn-add-ele").click(function() {
-        $("#dlgPopup").show();
+
 
         // reset input
         $("input").val(null);
@@ -73,6 +73,8 @@ function addEmployee() {
                 $("#m-employeeCode-txt").focus();
             }
         });
+
+        $("#dlgPopup").show();
     });
 
     // Ẩn

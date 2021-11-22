@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="../content/font/fontawesome-5.15.1/css/all.css">
 <link rel="stylesheet" href="../css/style.css">
+<!-- Thu vien js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
@@ -73,7 +74,7 @@
                 <div class="m-row">
                     <button id="m-btn-add-ele" class="m-btn ">
                         <div class="m-btn-icon"></div>
-                        <div class="m-btn-text">Thêm mới nhân viên</div>
+                        <div class="m-btn-text">Thêm mới nhân viên</div>    
                     </button>
                 </div>
             </div>
@@ -113,6 +114,7 @@
 
             </div>
             <div class="m-content-search-right">
+                <i id="m-c-s-r-delete" class="fas fa-user-times"></i>
                 <i id="btnRefresh" onclick="loadData()" class="fas fa-sync-alt"></i>
             </div>
         </div>
@@ -208,7 +210,7 @@
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-input">
                                                 <div class="m-row ">
-                                                    <input type="text" class="m-input" name="" id="m-employeeCode-txt">
+                                                    <input type="text" class="m-input" name="" id="m-employeeCode-txt" fieldName="EmployeeCode">
                                                 </div>
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-header">
@@ -216,7 +218,7 @@
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-input">
                                                 <div class="m-row ">
-                                                    <input type="date" class="m-input" name="" id="m-employeeDateOfBirth-txt">
+                                                    <input type="date" class="m-input" name="" id="m-employeeDateOfBirth-txt" fieldName="DateOfBirth">
                                                 </div>
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-header">
@@ -240,7 +242,7 @@
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-input">
                                                 <div class="m-row ">
-                                                    <input type="email" class="m-input" name="" id="m-employeeEmail-txt">
+                                                    <input type="email" class="m-input" name="" id="m-employeeEmail-txt" fieldName="Email">
                                                 </div>
                                             </div>
                                         </div>
@@ -252,14 +254,14 @@
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-input">
                                                 <div class="m-row ">
-                                                    <input type="text" class="m-input" name="" id="m-employeeFullName-txt">
+                                                    <input type="text" class="m-input" name="" id="m-employeeFullName-txt" fieldName="FullName">
                                                 </div>
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-header">
                                                 Giới tính
                                             </div>
                                             <div id="m-employeeGender-txt" class="mcombobox">
-                                                <input type="text" class="m-combobox m-combobox-input">
+                                                <input type="text" class="m-combobox m-combobox-input" fieldName="GenderName">
                                                 <button tabindex="-1" class="m-combobox-button">
                                                     <i class="fas fa-chevron-down"></i>
                                                 </button>
@@ -281,7 +283,7 @@
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-input">
                                                 <div class="m-row ">
-                                                    <input type="tel" class="m-input" name="" id="m-employeePhone-txt">
+                                                    <input type="tel" class="m-input" name="" id="m-employeePhone-txt" fieldName="PhoneNumber">
                                                 </div>
                                             </div>
                                         </div>
@@ -303,7 +305,7 @@
                                                 Vị trí
                                             </div>
                                             <div id="m-employeePositionId-txt" class="mcombobox">
-                                                <input type="text" class="m-combobox m-combobox-input">
+                                                <input type="text" class="m-combobox m-combobox-input" fieldName="PositionName">
                                                 <button tabindex="-1" class=" m-combobox-button">
                                                     <i class="fas fa-chevron-down"></i>
                                                 </button>
@@ -333,7 +335,7 @@
                                             <div class="m-d-c-r-g-i-c-box-header">
                                                 Phòng ban
                                             </div>
-                                            <div id="m-employeeDepartmentId-txt" class="mcombobox">
+                                            <div id="m-employeeDepartmentId-txt" class="mcombobox" fieldName="DepartmentName">
                                                 <input type="text" class="m-combobox m-combobox-input">
                                                 <button tabindex="-1" class="m-combobox-button">
                                                     <i class="fas fa-chevron-down"></i>
@@ -346,7 +348,7 @@
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-input">
                                                 <div class="m-row ">
-                                                    <input type="text" class="m-input" name="" id="m-employeeSalary-txt">
+                                                    <input type="text" class="m-input" name="" id="m-employeeSalary-txt" fieldName="Salary">
                                                 </div>
                                             </div>
                                             <div class="m-d-c-r-g-i-c-box-header">
@@ -390,13 +392,27 @@
         </div>
     </div>
 
-
-
+    <div class="m-toast-box">
+        <div id="m-toast-error" class="m-toast-msg m-toast-error" style="display: none;">
+            <div class="m-toast-icon"><i class="fas fa-exclamation-triangle"></i></div>
+            <div class="m-toast-text">Xóa thành công</div>
+            <div class="m-toast-close "><i class="fas fa-times"></i></div>
+        </div>
+        <div class="m-toast-msg m-toast-info" style="display: none">
+            <div class="m-toast-icon"><i class="fas fa-info-circle"></i></div>
+            <div class="m-toast-text">Thêm mới thành công</div>
+            <div class="m-toast-close "><i class="fas fa-times"></i></div>
+        </div>
+    </div>
 </body>
 <!-- js -->
-<script src="./js/btn.js"></script>
-<script src="./js/app.js"></script>
-<script src="./js/combobox.js"></script>
+<!-- Cac js dùng chung -->
+<script src="/js/base/Enum.js"></script>
+<script src="/js/employee.js"></script>
+<script src="/js/base/common.js"></script>
+<!-- <script src="/js/app.js"></script> -->
+<!-- Cac js dùng riêng -->
+<script src="/js/combobox.js"></script>
 
 
 

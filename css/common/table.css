@@ -33,3 +33,7 @@ table.m-table tr td:first-child,
 table.m-table th:first-child {
     padding-left: 16px;
 }
+
+table.m-table tr.m-row-selected {
+    background-color: rgba(83, 51, 116, 0.452) !important;
+}

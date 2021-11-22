@@ -5,303 +5,302 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phần mềm quản lý nhà hàng CUKCUK.VN</title>
-    <!-- font -->
-    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <!-- all -->
-    <link rel="stylesheet" href="./css/main.css">
-
+    <title>Document</title>
+    <!-- Nhúng css -->
+    <!-- Nhúng thư viện -->
+    <link rel="stylesheet" href="./content/font/fontawesome-5.15.1/css/all.css">
+    <!-- Nhúng các css sử dụng chung -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/common.css"> -->
+    <!-- Nhúng các css sử dụng riêng cho các trang -->
 </head>
 
 <body>
     Welcome to MISA!
-
-    <div class="t-row">
-        <label for="" class="t-label">
+    <!-- 1. Button -->
+    <div class="m-row">
+        <label for="" class="m-label">
             1. Button
         </label>
-        <div class="t-row">
-            <button class="t-btn">Thêm mới nhân viên</button>
-        </div>
-    </div>
-
-    <div class="t-row">
-        <label for="" class="t-label">
-            2. Button Icon
-        </label>
-        <div class="t-row">
-            <button class="t-btn">
-                <div class="t-btn-icon t-icon t-icon-add-employee"></div>
-                <div class="t-btn-text">Thêm nhân viên</div>
+        <div class="m-row">
+            <button class="m-btn">
+                Thêm mới nhân viên
             </button>
         </div>
     </div>
-
-    <div class="t-row">
-        <label for="" class="t-label">
-            3. Combobox
+    <!-- 2. Button icon -->
+    <div class="m-row">
+        <label for="" class="m-label">
+            2. Button icon
         </label>
-        <div class="t-row">
-            <select class="t-combobox" name="" id="">
-                <option value="">Nam</option>
-                <option value="">Nữ</option>
-            </select>
+        <div class="m-row">
+            <button class="m-btn">
+                <div class="m-btn-icon"></div>
+                <div class="m-btn-text">Thêm mới nhân viên</div>
+            </button>
         </div>
     </div>
-
-    <div class="t-row">
-        <label for="" class="t-label">
-            4. Field Input
+    <div class="m-row">
+        <label for="" class="m-label">
+            2-5. Button icon
         </label>
-        <div class="t-row">
-            <input type="text" class="t-input" placeholder="Nhập họ và tên">
+        <div class="m-row m-row-2">
+            <button class="m-btn m-btn-1">
+                <div class="m-btn-icon-save"></div>
+                <div class="m-btn-text">Thêm mới nhân viên</div>
+            </button>
+            <button class="m-btn m-btn-2">
+                <div class="m-btn-icon-down"></div>
+            </button>
         </div>
     </div>
-
-    <div class="t-row">
-        <label for="" class="t-label">
-            5. Input Icon
+    <!-- 3.COMBOBOX -->
+    <div class="m-row">
+        <label for="" class="m-label">
+            3.COMBOBOX
         </label>
-        <div class="t-row">
-            <input type="text" class="t-input t-input-icon" placeholder="Tìm kiếm">
+        <select class="m-combobox" name="" id="">
+            <option value="">Nam</option>
+            <option value="">Nữ</option>
+            <option value="">Khác</option>
+        </select>
+    </div>
+    <!-- 5. Input Search -->
+    <div class="m-row">
+        <label for="m-row" class="m-label">5. Input Search</label>
+        <input type="text" class="m-input m-input-search" name="" id="" placeholder="Tìm kiếm thông tin">
+    </div>
+    <div class="m-row">
+        <label for="m-row" class="m-label">5. Input Search Error</label>
+        <input type="text" class="m-input m-input-search m-input-error" name="" id="" placeholder="Tìm kiếm thông tin">
+    </div>
+    <!-- 6. Input Defalt -->
+    <div class="m-row">
+        <label for="m-row" class="m-label">6. Input Defalt</label>
+        <input type="text" class="m-input" name="" id="" placeholder="hint text">
+    </div>
+    <!-- 7. Input Error -->
+    <div class="m-row">
+        <label for="m-row" class="m-label">7. Input Error</label>
+        <br>
+        <br>
+
+        <div class="m-input-box">
+            <input type="text" class="m-input m-input-error" name="" id="" placeholder="hint text">
+            <div class="m-error-info">
+                Mật khẩu không được trùng với tài khoảng
+                <div class="m-arrow-bottom"></div>
+            </div>
         </div>
     </div>
+    <br>
+    <!-- 9. TOAST MESSENGER -->
+    <div class="m-row">
+        <label for="m-row" class="m-label">9. TOAST MESSENGER</label>
+        <div class="m-toast-box">
+            <div class="m-toast-msg m-toast-error">
+                <div class="m-toast-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                <div class="m-toast-text">Thêm mới thành công</div>
+                <div class="m-toast-close "><i class="fas fa-times"></i></div>
+            </div>
+            <div class="m-toast-msg m-toast-info">
+                <div class="m-toast-icon"><i class="fas fa-info-circle"></i></div>
+                <div class="m-toast-text">Thêm mới thành công</div>
+                <div class="m-toast-close "><i class="fas fa-times"></i></div>
+            </div>
+            <div class="m-toast-msg m-toast-warning">
+                <div class="m-toast-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                <div class="m-toast-text">Thêm mới thành công</div>
+                <div class="m-toast-close "><i class="fas fa-times"></i></div>
+            </div>
+            <div class="m-toast-msg m-toast-success">
+                <div class="m-toast-icon"><i class="fas fa-check"></i></i>
+                </div>
+                <div class="m-toast-text">Thêm mới thành công</div>
+                <div class="m-toast-close "><i class="fas fa-times"></i></div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- 10. POP-UP CẢNH CÁO -->
+    <div class="m-row">
+        <label for="m-row" class="m-label">10. POP-UP CẢNH CÁO</label>
+        <button id="btnShowPopup" class="m-btn">
+            Hiện thị Popup
+        </button>
+        <div id="dlgPopup" class="m-dialog-modal">
+            <div class="m-dialog">
 
-    <div class="t-row">
-        <label for="" class="t-label">
-            6. Table
-        </label>
-        <div class="t-row">
-            <table class="t-row t-table">
-                <tr class="t-table-head">
-                    <th class="t-table-title t-column-100">
-                        <div class="t-column-name">Mã nhân viên</div>
-                        <i class="fas fa-sort t-column-icon"></i>
-                    </th>
-                    <th class="t-table-title t-column-150">
-                        <div class="t-column-name">Họ và tên</div>
-                        <i class="fas fa-sort t-column-icon"></i>
-                    </th>
-                    <th class="t-table-title t-column-100">
-                        <div class="t-column-name">Ngày sinh</div>
-                        <i class="fas fa-sort t-column-icon"></i>
-                    </th>
-                    <th class="t-table-title t-column-100">
-                        <div class="t-column-name">Lương cơ bản</div>
-                        <i class="fas fa-sort t-column-icon"></i>
-                    </th>
-                    <th class="t-table-title t-column-150">
-                        <div class="t-column-name">Bộ phận/Phòng ban</div>
-                        <i class="fas fa-sort t-column-icon"></i>
-                    </th>
+                <div class="m-dialog-header">
+                    <div class="m-dialog-title">
+                        Thông tin khách hàng
+                    </div>
+                    <div id="m-dialog-close" class="m-dialog-close"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="m-dialog-content">
+                    <div class="m-dialog-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="m-dialog-text">
+                        Bạn có chắc muốn xóa khách hàng
+                    </div>
+                </div>
+                <div class="m-dialog-footer">
+                    <button class="m-btn m-btn-nobg m-btn-footer">
+                            Hủy
+                        </button>
+                    <button class="m-btn m-btn-footer">
+                            Xóa
+                        </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 8. Table -->
+    <div class="m-row">
+        <label for="m-row" class="m-label">8. Table</label>
+        <table class="m-table" border="1">
+            <thead>
+                <tr>
+                    <th class="text-align-left" style="width: 120px;">Mã nhân viên</th>
+                    <th class="text-align-left">Họ và tên</th>
+                    <th class="text-align-left" style="width: 80px;">Giới tính</th>
+                    <th class="text-align-center" style="width: 100px;">Ngày sinh</th>
+                    <th class="text-align-right" style="width: 150px;">Mức lương</th>
                 </tr>
-
-                <!-- body -->
-
-
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-align-left">NV001</td>
+                    <td class="text-align-left">Baka chan</td>
+                    <td class="text-align-left">Pan</td>
+                    <td class="text-align-center">10/11/2000</td>
+                    <td class="text-align-right">50.000.000</td>
+                </tr>
+                <tr>
+                    <td class="text-align-left">NV001</td>
+                    <td class="text-align-left">Kien Nguyen</td>
+                    <td class="text-align-left">BI</td>
+                    <td class="text-align-center">10/11/2000</td>
+                    <td class="text-align-right">5.000.000</td>
+                </tr>
+                <tr>
+                    <td class="text-align-left">NV001</td>
+                    <td class="text-align-left">Tran Cuong</td>
+                    <td class="text-align-left">NAM</td>
+                    <td class="text-align-center">10/11/2000</td>
+                    <td class="text-align-right">120.000.000</td>
+                </tr>
+                <tr>
+                    <td class="text-align-left">NV001</td>
+                    <td class="text-align-left">Baka chan</td>
+                    <td class="text-align-left">Pan</td>
+                    <td class="text-align-center">10/11/2000</td>
+                    <td class="text-align-right">50.000.000</td>
+                </tr>
+                <tr>
+                    <td class="text-align-left">NV001</td>
+                    <td class="text-align-left">Baka chan</td>
+                    <td class="text-align-left">Pan</td>
+                    <td class="text-align-center">10/11/2000</td>
+                    <td class="text-align-right">50.000.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 8. Table with Paging -->
+    <div class="m-row">
+        <label for="m-row" class="m-label" style="color: aqua">8. Table with Paging</label>
+        <div class="m-grid">
+            <table class="m-table" border="1">
+                <thead>
+                    <tr>
+                        <th class="text-align-left" style="width: 120px;">Mã nhân viên</th>
+                        <th class="text-align-left">Họ và tên</th>
+                        <th class="text-align-left" style="width: 80px;">Giới tính</th>
+                        <th class="text-align-center" style="width: 100px;">Ngày sinh</th>
+                        <th class="text-align-right" style="width: 150px;">Mức lương</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-align-left">NV001</td>
+                        <td class="text-align-left">Baka chan</td>
+                        <td class="text-align-left">Pan</td>
+                        <td class="text-align-center">10/11/2000</td>
+                        <td class="text-align-right">50.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-align-left">NV001</td>
+                        <td class="text-align-left">Kien Nguyen</td>
+                        <td class="text-align-left">BI</td>
+                        <td class="text-align-center">10/11/2000</td>
+                        <td class="text-align-right">5.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-align-left">NV001</td>
+                        <td class="text-align-left">Tran Cuong</td>
+                        <td class="text-align-left">NAM</td>
+                        <td class="text-align-center">10/11/2000</td>
+                        <td class="text-align-right">120.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-align-left">NV001</td>
+                        <td class="text-align-left">Baka chan</td>
+                        <td class="text-align-left">Pan</td>
+                        <td class="text-align-center">10/11/2000</td>
+                        <td class="text-align-right">50.000.000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-align-left">NV001</td>
+                        <td class="text-align-left">Baka chan</td>
+                        <td class="text-align-left">Pan</td>
+                        <td class="text-align-center">10/11/2000</td>
+                        <td class="text-align-right">50.000.000</td>
+                    </tr>
+                </tbody>
             </table>
+            <div class="m-paging">
+                <div class="m-paging-left">Hiện thị 1-10/100 nhân viên</div>
+                <div class="m-paging-center">
+                    <div class="m-paging-hover m-paging-first"></div>
+                    <div class="m-paging-hover m-paging-prev"></div>
 
-            <!-- fas fa-sort -->
+                    <div class="m-paging-number">
+                        <div class="m-paging-hover page-number page-number-1">1</div>
+                        <div class="m-paging-hover page-number">2</div>
+                        <div class="m-paging-hover page-number">3</div>
+                        <div class="m-paging-hover page-number">4</div>
+                        <div class="m-paging-hover page-number">5</div>
 
-
-        </div>
-    </div>
-    <br><br><br><br><br>
-
-    <div class="t-row">
-        <label for="" class="t-label">
-            7. Page Navigations
-        </label>
-        <div class="t-row">
-            <div class="t-nav-container">
-
-                <div class="t-first-page t-icon-size"></div>
-                <div class="t-prev-page t-icon-size"></div>
-
-                <div class="t-select-page">
-                    <div class="t-page-item">1</div>
-                    <div class="t-page-item">2</div>
-                    <div class="t-page-item">3</div>
-                    <div class="t-page-item">4</div>
-                </div>
-
-                <div class="t-next-page t-icon-size"></div>
-                <div class="t-last-page t-icon-size"></div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="t-row">
-        <label for="" class="t-label">
-            8. Chip-Status
-        </label>
-        <div class="t-row">
-            <div class="t-status-conatiner">
-                <div class="t-status t-status-denied">Bị từ chối</div>
-                <div class="t-status t-status-approved">Đã duyệt</div>
-                <div class="t-status t-status-sent">Đã gửi</div>
-                <div class="t-status t-status-lack">Thiếu thông tin</div>
-                <div class="t-status t-status-unsent">Chưa gửi</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="t-row">
-        <label for="" class="t-label">
-            9. Toast messenger
-        </label>
-        <div class="t-row">
-            <div class="t-messenger-conatiner">
-                <div class="t-messenger-box">
-                    <div class="t-messenger-content">
-                        <div>
-                            <i class="fas fa-exclamation-triangle t-messenger-icon t-messenger-error"></i>
-                        </div>
-                        <div class="t-messenger-text">Nội dung đi kèm tiêu đề</div>
                     </div>
-                    <i class="fal fa-times t-messenger-close t-messenger-error"></i>
+                    <div class="m-paging-hover m-paging-next"></div>
+                    <div class="m-paging-hover m-paging-last"></div>
+
+
                 </div>
-
-                <div class="t-messenger-box">
-                    <div class="t-messenger-content">
-                        <div>
-                            <i class="fas fa-exclamation-circle t-messenger-icon t-messenger-warn"></i>
-                        </div>
-                        <div class="t-messenger-text">Nội dung đi kèm tiêu đề</div>
-                    </div>
-                    <i class="fal fa-times t-messenger-close t-messenger-warn"></i>
-                </div>
-
-                <div class="t-messenger-box">
-                    <div class="t-messenger-content">
-                        <div>
-                            <i class="fas fa-check-circle t-messenger-icon t-messenger-success"></i>
-                        </div>
-                        <div class="t-messenger-text">Nội dung đi kèm tiêu đề</div>
-                    </div>
-                    <i class="fal fa-times t-messenger-close t-messenger-success"></i>
-                </div>
-
-                <div class="t-messenger-box">
-                    <div class="t-messenger-content">
-                        <div>
-                            <i class="fas fa-info-circle t-messenger-icon t-messenger-info"></i>
-                        </div>
-                        <div class="t-messenger-text">Nội dung đi kèm tiêu đề</div>
-                    </div>
-                    <i class="fal fa-times t-messenger-close t-messenger-info"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <br><br><br>
-
-    <!-- <div class="t-row">
-        <label for="" class="t-label">
-            10. Chip-Status
-        </label>
-        <div class="t-row">
-            <div class="t-dialog-conatiner">
-
-                
-                <div class="t-dialog-close">
-                    <i class="fal fa-times t-dialog-times"></i>
-                </div>
-                
-                <div class="t-clear"></div>
-
-               
-                <div class="t-dialog-header t-dialog-24">Đóng Form thông tin chung</div>
-                <div class="t-dialog-content t-dialog-24">
-                    <div class="t-dialog-status">
-                        <i class="fas fa-exclamation-triangle t-dialog-warn"></i>
-                    </div>
-                    <div class="t-dialog-text">Bạn có chắc muốn đóng form đăng nhập <b>"Thông tin chung của thủ tục 603"</b> hay không?</div>
-                </div>
-
-                <div class="t-dialog-footer">
-                    <div class="t-dialog-btn t-dialog-btn1">Tiếp tục nhập</div>
-                    <div class="t-dialog-btn t-dialog-btn2">Đóng</div>
+                <div class="m-paging-right">
+                    <select class="m-combobox" name="" id="">
+                        <option value="10">10 nhân viên / trang</option>
+                        <option value="50">50 nhân viên / trang</option>
+                        <option value="100">100 nhân viên / trang</option>
+                    </select>
                 </div>
 
             </div>
         </div>
-    </div> -->
 
-    <br><br><br>
-
-    <div class="t-row">
-        <label for="" class="t-label">
-            11. Field Input Icon (Error)
-        </label>
-        <div class="t-row">
-            <div class="t-error-box">
-                <div class="t-message-box">
-                    <div class="t-error-message">Mật khẩu không được trùng với tài khoản</div>
-                    <div class="t-box-footer"></div>
-                </div>
-                <input type="text" class="t-input t-input-icon t-input-error" placeholder="Tìm kiếm">
-            </div>
-        </div>
     </div>
-
-
-
-    <br><br><br><br><br><br><br><br>
-
-    <div class="t-row">
-        <label for="" class="t-label">
-            12. Dialog
-        </label>
-        <div class="t-dialog-add">
-            <div class="t-dialog-container">
-                <div class="t-close-dialog"><i class="far fa-times"></i></div>
-                <div class="t-dialog-header">Thêm nhân viên</div>
-                <div class="t-dialog-row">
-                    <div class="t-dialog-input">
-                        <div class="t-input-title">Mã nhân viên</div>
-                        <input type="text" class="t-input-info" placeholder="Nhập thông tin...">
-                    </div>
-                    <div class="t-dialog-input">
-                        <div class="t-input-title">Họ và tên</div>
-                        <input type="text" class="t-input-info" placeholder="Nhập thông tin...">
-                    </div>
-                </div>
-                <div class="t-dialog-row">
-                    <div class="t-dialog-input">
-                        <div class="t-input-title">Ngày sinh</div>
-                        <input type="text" class="t-input-info" placeholder="Nhập thông tin...">
-                    </div>
-                    <div class="t-dialog-input">
-                        <div class="t-input-title">Bộ phần/Phòng ban</div>
-                        <input type="text" class="t-input-info" placeholder="Nhập thông tin...">
-                    </div>
-                </div>
-                <div class="t-dialog-row">
-                    <div class="t-dialog-input">
-                        <div class="t-input-title">Lương cơ bản</div>
-                        <input type="text" class="t-input-info" placeholder="Nhập thông tin...">
-                    </div>
-                    <div class="t-dialog-input">
-                        <div class="t-input-title">Ghi chú khác</div>
-                        <input type="text" class="t-input-info" placeholder="Nhập thông tin...">
-                    </div>
-                </div>
-
-                <!-- btn -->
-                <div class="t-dialog-btn">
-                    <button class="t-close-btn">Đóng</button>
-                    <button class="t-add-btn">Thêm</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
 
 </body>
+<script>
+    document.getElementById('btnShowPopup').addEventListener('click', () => {
+        document.getElementById('dlgPopup').style.display = 'block';
+    })
+    document.getElementById('m-dialog-close').addEventListener('click', () => {
+        document.getElementById('dlgPopup').style.display = 'none';
+    })
+</script>
 
 </html>
