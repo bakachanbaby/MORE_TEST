@@ -24,38 +24,35 @@ class EmlpoyeePage {
     loadData() {
 
             // Lam sach bang
-            $('#tbdlEmloyeesList tbody').empty();
+            $('#tbdlCustomerList tbody').empty();
             // Lấy dữ liệu:
-            let employees = [];
+            let customer = [];
             // Gọi lên api thực hiện lấy dữ liệu:
 
             $.ajax({
                 type: "GET",
-                url: "http://cukcuk.manhnv.net/api/v1/Employees",
+                url: "http://cukcuk.manhnv.net/api/v1/Customerss",
                 async: true,
                 success: function(response) {
-                    employees = response;
+                    customer = response;
                     //Duyệt từng nhân viên trong mảng:
-                    for (let e of employees) {
-                        e.DateOfBirth = CommonJS.formatDate(e.DateOfBirth);
-                        e.Salary = CommonJS.formatSalary(e.Salary)
-                            // Build từng tr và append vào tbody của table:
+                    for (let c of customer) {
+                        c.DateOfBirth = CommonJS.formatDate(c.DateOfBirth);
+                        // Build từng tr và append vào tbody của table:
                         let tr = $(`<tr>
-                <td class="text-align-left">${e.EmployeeCode}</td>
-                <td class="text-align-left">${e.FullName}</td>
-                <td class="text-align-left">${e.GenderName}</td>
-                <td class="text-align-center">${e.DateOfBirth}</td>
-                <td class="text-align-center">${e.PhoneNumber}</td>
-                <td class="text-align-left">${e.Email}</td>
-                <td class="text-align-left">${e.PositionName}</td>
-                <td class="text-align-left">${e.DepartmentName}</td>
-                <td class="text-align-right">${e.Salary}</td>
+                <td class="text-align-left">${c.CustomerCode}</td>
+                <td class="text-align-left">${c.FullName}</td>
+                <td class="text-align-left">${c.GenderName}</td>
+                <td class="text-align-center">${c.DateOfBirth}</td>
+                <td class="text-align-center">${c.PhoneNumber}</td>
+                <td class="text-align-left">${c.Email}</td>
+                <td class="text-align-left">${c.Address}</td>
                         </tr>`);
                         // Lưu trử khóa chính của dòng dữ liệu hiện tại: 
-                        tr.data("employeeId", e.EmployeeId);
-                        tr.data("data", e);
+                        tr.data("employeeId", c.CustomerId);
+                        tr.data("data", c);
                         // Thêm tr vào trong bảng
-                        $('#tbdlEmloyeesList tbody').append(tr);
+                        $('#tbdlCustomerList tbody').append(tr);
                     }
                     $('.m-loading').hide();
                 },
@@ -64,7 +61,7 @@ class EmlpoyeePage {
                 }
             });
             // Xác định element sẽ hiện thị dữ liệu:
-            let table = $('#tbdlEmloyeesList')
+            let table = $('#tbdlCustomerList')
         }
         /**
          * Gán sự kiện cho các sự kiện có trong trang
@@ -83,8 +80,8 @@ class EmlpoyeePage {
 
         //Row double click:
         // debugger
-        $('table#tbdlEmloyeesList tbody').on('dblclick', 'tr', this.rowOnDblClick.bind(this));
-        $('table#tbdlEmloyeesList tbody').on('click', 'tr', this.rowOnClick.bind(this));
+        $('table#tbdlCustomerList tbody').on('dblclick', 'tr', this.rowOnDblClick.bind(this));
+        $('table#tbdlCustomerList tbody').on('click', 'tr', this.rowOnClick.bind(this));
         $('#m-c-s-r-delete').click(this.delete.bind(this))
     }
 
@@ -205,7 +202,7 @@ class EmlpoyeePage {
                 type: "GET",
                 url: `http://cukcuk.manhnv.net/api/v1/Employees/${employeeId}`,
 
-                success: function(e) {
+                success: function(c) {
 
                     // Binding du lieu vao form
                     // 1. Lấy toàn bộ các input sẽ biding dữ liệu -> có attribute [fieldName];
@@ -213,7 +210,7 @@ class EmlpoyeePage {
                     // 2. Duyệt từng input -> Lấy ra giá trị của attribute -> Để biết được sẽ map thông tin nào của đối tượng
                     for (const input of inputs) {
                         let fieldName = input.getAttribute("fieldName");
-                        let value = e[fieldName];
+                        let value = c[fieldName];
                         if (value)
                             input.value = value;
                         else
@@ -240,12 +237,12 @@ class EmlpoyeePage {
             // 1. Lấy toàn bộ các input sẽ biding dữ liệu -> có attribute [fieldName];
             let inputs = $("input[fieldName]");
             // 2. Duyệt từng input -> Lấy ra giá trị của attribute -> Để biết được sẽ map thông tin nào của đối tượng
-            let e = {};
+            let c = {};
             for (const input of inputs) {
                 let fieldName = input.getAttribute("fieldName");
                 let value = input.value;
                 if (value)
-                    e[fieldName] = value;
+                    c[fieldName] = value;
 
             }
 
@@ -256,24 +253,22 @@ class EmlpoyeePage {
                 let value = $(combobox).attr('value');
                 let fieldName = $(combobox).data('fieldName');
                 if (fieldName) {
-                    e[fieldName] = value;
+                    c[fieldName] = value;
                 }
-                // debugger
 
             }
-            console.log(e);
-            // return;
+            console.log(c);
             // Thực hiện cất dữ liệu => cần kiểm tra xem form ở trạng thái thêm mới hay là update để gọi api tương ứng
             if (this.FormMode == Enum.FormMode.Add) {
                 $.ajax({
                     type: "POST",
                     url: "http://cukcuk.manhnv.net/api/v1/Employees",
-                    data: JSON.stringify(e),
+                    data: JSON.stringify(c),
                     async: false,
                     dataType: "json",
                     contentType: "application/json",
                     success: function(response) {
-                        // console.log(e);
+                        console.log(c);
                         // Load lại dự liệu
                         me.loadData();
                         // Ẩn form chi tiết
@@ -285,7 +280,7 @@ class EmlpoyeePage {
                 $.ajax({
                     type: "PUT",
                     url: `http://cukcuk.manhnv.net/api/v1/Employees/${this.EmployeeIdSelected}`,
-                    data: JSON.stringify(e),
+                    data: JSON.stringify(c),
                     dataType: "json",
                     contentType: "application/json",
                     success: function(response) {

@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    new MCombobox();
+    // Thực hiện build động các combobox tự xây dựng:
+
     // Khởi tạo sự kiện cho button của combobox
     $(".mcombobox .m-combobox-button").click(btnComboboxOnclick);
     $(".mcombobox .m-combobox-item").click(itemComboboxOnclick);
@@ -7,13 +10,104 @@ $(document).ready(function() {
     $(".mcombobox input").keyup(inputComboboxOnKeyUp);
 
     // Lưu trữ thông tin của combobox data:
-    // let comboboxs = $('.m-combobox');
-    // for(const combobox of comboboxs) {
-    //     let itemDataElements = $(combobox).find('m-combobox-data').html();
-    //     $(combobox).data('itemDataElement', itemDataElements);
-    //     $(this).siblings('.m-combobox-data')
-    // } 
+    let comboboxs = $('.mcombobox');
+    for (const combobox of comboboxs) {
+        // Load dữ liệu theo api:
+        // Kiểm tra xem có khai báo thông tin Api lấy dữ liệu hay không ?
+        const api = combobox.getAttribute('api');
+        const propertyDisplay = combobox.getAttribute('proppertyDisplay');
+        const propertyValue = combobox.getAttribute('propertyValue');
+        if (api && propertyDisplay && propertyValue) {
+            // Lấy dữ liệu từ api:
+            $.ajax({
+                type: "GET",
+                url: api,
+                success: function(data) {
+                    // Build combobox data
+                    for (const item of data) {
+                        let text = item[propertyDisplay];
+                        let value = item[propertyValue];
+                        let itemHTML = `<div class="m-combobox-item" value="${value}">${text}</div>`;
+                        $(combobox).find('.m-combobox-data').append(itemHTML);
+                    }
+                }
+            });
+        }
+        // Lưu trử thông tin cần thiết vào data của combobox
+        let itemDataElements = $(combobox).find('m-combobox-data').html();
+        $(combobox).data('itemDataElement', itemDataElements);
+    }
 })
+
+class MCombobox {
+    constructor() {
+            this.buildComboboxHTML();
+        }
+        /**
+         * Thực hiện xây dựng định dạng combox
+         * Author: BAKACHAN (25/11/2021)
+         */
+    buildComboboxHTML() {
+        // Duyệt tất cả các thẻ là combobox:
+        let comboboxs = $('combobox');
+        for (const combobox of comboboxs) {
+            // Lấy ra các thông tin cần thiết (VD: api lấy dữ liệu, trường thông tin sẽ hiển thị, trường giá trị của từng item)
+
+            const api = combobox.getAttribute('api');
+            const propertyDisplay = combobox.getAttribute('proppertyDisplay');
+            const propertyValue = combobox.getAttribute('propertyValue');
+            const fieldName = combobox.getAttribute('fieldName')
+            const id = combobox.getAttribute('id');
+            // Build HTML của combobox:
+            let comboboxHTML = $(`<div mcombobox id="${id||''}" class="mcombobox" fieldName = "${fieldName}">
+                                <input type="text" class="m-combobox m-combobox-input">
+                                <button tabindex="-1" class="m-combobox-button">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="m-combobox-data">
+                                </div>
+                            </div>`);
+            comboboxHTML.data('fieldName', fieldName);
+            // Nếu có khai báo các api, trường thông tin của dữ liệu thì buildl các item:
+
+            if (api && propertyDisplay && propertyValue) {
+                // Lấy dữ liệu từ api:
+                $.ajax({
+                    type: "GET",
+                    url: api,
+                    async: false,
+                    success: function(data) {
+                        // Build combobox data
+                        for (const item of data) {
+                            let text = item[propertyDisplay];
+                            let value = item[propertyValue];
+                            let itemHTML = `<div class="m-combobox-item" value="${value}">${text}</div>`;
+                            $(comboboxHTML).find('.m-combobox-data').append(itemHTML);
+                        }
+
+
+                    }
+                });
+            } else {
+                // Lấy cả các node là item
+                let items = $(combobox).children('item');
+                // Thực hiện build từng item data cho combobox
+                for (const item of items) {
+                    let text = item.textContent;
+                    let value = item.getAttribute('value');
+                    let itemHTML = `<div class="m-combobox-item" value="${value}">${text}</div>`;
+                    $(comboboxHTML).find('.m-combobox-data').append(itemHTML);
+
+                }
+
+            }
+            $(combobox).replaceWith(comboboxHTML);
+
+
+        }
+    }
+}
+
 
 function inputComboboxOnKeyUp() {
     // $(this).siblings('.m-combobox-data').empty();
@@ -36,12 +130,10 @@ function inputComboboxOnKeyUp() {
     // 2. Duyệt từng item và thực hiện kiểm tra xem element nào có value hợp lệ
     let items = $(this).siblings('.m-combobox-data').children();
     for (const item of items) {
-        debugger
         let text = item.textContent;
         if (!text.toLowerCase().includes(valueInput.toLowerCase())) {
             item.remove();
         }
-        debugger
     }
     $(this).siblings('.m-combobox-data').show();
 }
@@ -145,10 +237,10 @@ function itemComboboxOnclick() {
     // 4. Gán value cho combobox
     let comboboxElement = $(this).parents('.mcombobox');
     // Cách 1: thực hiện lưu value vào attribute của element
-    // comboboxElement.attr("value", value);
+    comboboxElement.attr("value", value);
     // Cách 2: gán vào data của element
     comboboxElement.data("value", value);
-
+    // console.log(value);
     // Ẩn conbobox data
     $(parentItem).hide();
 }

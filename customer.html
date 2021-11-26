@@ -68,13 +68,13 @@
         <!-- CONTENT TITTLE -->
         <div class="m-content-tittle">
             <div class="m-tittle-left">
-                <div class="m-tittle-l-text">Danh sách nhân viên</div>
+                <div class="m-tittle-l-text">Danh sách khách hàng</div>
             </div>
             <div class="m-tittle-right">
                 <div class="m-row">
                     <button id="m-btn-add-ele" class="m-btn ">
                         <div class="m-btn-icon"></div>
-                        <div class="m-btn-text">Thêm mới nhân viên</div>    
+                        <div class="m-btn-text">Thêm mới khách hàng</div>    
                     </button>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                     <input type="text" class="m-input m-input-search" name="" id="" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại">
                 </div>
 
-                <div class="mcombobox m-c-s-mcombobox">
+                <!-- <div class="mcombobox m-c-s-mcombobox">
                     <input type="text" class="m-combobox m-combobox-input m-c-s-all" placeholder="Tất cả phòng ban">
                     <button tabindex="-1" class="m-combobox-button">
                         <i class="fas fa-chevron-down"></i>
@@ -110,7 +110,7 @@
                         <div class="m-combobox-item" value="3">Giám Đốc</div>
                         <div class="m-combobox-item" value="4">Thu Ngân</div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
             <div class="m-content-search-right">
@@ -122,18 +122,18 @@
         <div class="m-content-table">
             <div class="m-row">
                 <div class="m-grid">
-                    <table id="tbdlEmloyeesList" class="m-table" border="1">
+                    <table id="tbdlCustomerList" class="m-table" border="1">
                         <thead>
                             <tr>
-                                <th class="text-align-left" style="width: 100px;" fieldName="EmployeeCode">Mã nhân viên</th>
-                                <th class="text-align-left" style='width: 110px;' fieldName="FullName">Họ và tên</th>
+                                <th class="text-align-left" style="width: 100px;" fieldName="CustomerCode">Mã Khách hàngn</th>
+                                <th class="text-align-left" style='width: 110px;' ieldName="FullName">Họ và tên</th>
                                 <th class="text-align-left" style="width: 70px;" fieldName="GenderName">Giới tính</th>
                                 <th class="text-align-center" style="width: 70px;" fieldName="DateOfBirth">Ngày sinh</th>
                                 <th class="text-align-center" style="width: 90px;" fieldName="PhoneNumber">Điện thoại</th>
-                                <th class="text-align-left" fieldName="Email">Email</th>
-                                <th class="text-align-left" style="width: 130px;" fieldName="PositionName">Chức vụ</th>
-                                <th class="text-align-left" style="width: 120px;" fieldName="DepartmentName">Phòng ban</th>
-                                <th class="text-align-right" style="width: 100px;" fieldName="Salary">Mức lương</th>
+                                <th class="text-align-left" style="width: 100px;" fieldName="Email">Email</th>
+                                <!-- <th class="text-align-left" style="width: 130px;">Chức vụ</th>
+                                <th class="text-align-left" style="width: 120px;">Phòng ban</th> -->
+                                <th class="text-align-left" fieldName="Adress">Địa chỉ</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -146,7 +146,7 @@
         </div>
 
         <div class="m-paging">
-            <div class="m-paging-left">Hiện thị 1-10/100 nhân viên</div>
+            <div class="m-paging-left">Hiện thị 1-10/100 khách hàng</div>
             <div class="m-paging-center">
                 <div class="m-paging-hover m-paging-first"></div>
                 <div class="m-paging-hover m-paging-prev"></div>
@@ -166,9 +166,9 @@
             </div>
             <div class="m-paging-right">
                 <select class="m-combobox" name="" id="">
-                    <option value="10">10 nhân viên / trang</option>
-                    <option value="50">50 nhân viên / trang</option>
-                    <option value="100">100 nhân viên / trang</option>
+                    <option value="10">10 khách hàng / trang</option>
+                    <option value="50">50 khách hàng / trang</option>
+                    <option value="100">100 khách hàng / trang</option>
                 </select>
             </div>
 
@@ -260,9 +260,9 @@
                                             <div class="m-d-c-r-g-i-c-box-header">
                                                 Giới tính
                                             </div>
-                                            <combobox id="m-employeeGender-txt" fieldName="Gender">
+                                            <combobox id="m-employeeGender-txt" fieldName="GenderName">
                                                 <item value="1">Nam</item>
-                                                <item value="0">Nữ</item>
+                                                <item value="2">Nữ</item>
                                             </combobox>
                                             <!-- <div id="m-employeeGender-txt" class="mcombobox">
                                                 <input type="text" class="m-combobox m-combobox-input" fieldName="GenderName">
@@ -307,7 +307,7 @@
                                             <div class="m-d-c-r-g-i-c-box-header">
                                                 Vị trí
                                             </div>
-                                            <combobox id="m-employeePositionId-txt" api="http://cukcuk.manhnv.net/api/v1/Positions" proppertyDisplay="PositionName" propertyValue="PositionId" fieldName="PositionId">
+                                            <combobox id="m-employeePositionId-txt" api="http://cukcuk.manhnv.net/api/v1/Positions" proppertyDisplay="PositionName" propertyValue="PositionId" fieldName="PositionName">
                                             </combobox>
                                             <!-- <div id="m-employeePositionId-txt" class="mcombobox">
                                                 <input type="text" class="m-combobox m-combobox-input">
@@ -341,7 +341,7 @@
                                                 Phòng ban
                                             </div>
 
-                                            <combobox id="m-employeeDepartmentId-txt" api="http://cukcuk.manhnv.net/api/v1/Departments" proppertyDisplay="DepartmentName" propertyValue="DepartmentId" fieldName="DepartmentId">
+                                            <combobox id="m-employeeDepartmentId-txt" api="http://cukcuk.manhnv.net/api/v1/Departments" proppertyDisplay="DepartmentName" propertyValue="DepartmentId" fieldName="DepartmentName">
                                             </combobox>
 
 
@@ -401,11 +401,11 @@
         </div>
     </div>
 
-    <div class="m-loading">
+    <!-- <div class="m-loading">
         <div class="m-loading-icon">
 
         </div>
-    </div>
+    </div> -->
 
     <div class="m-toast-box">
         <div id="m-toast-error" class="m-toast-msg m-toast-error" style="display: none;">
@@ -423,7 +423,7 @@
 <!-- js -->
 <!-- Cac js dùng chung -->
 <script src="/js/base/Enum.js"></script>
-<script src="/js/employee.js"></script>
+<script src="/js/customer.js"></script>
 <script src="/js/base/common.js"></script>
 <!-- <script src="/js/app.js"></script> -->
 <!-- Cac js dùng riêng -->
